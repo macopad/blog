@@ -20,6 +20,7 @@ class Solution
     private $result = array();
 
     /**
+     * 广度搜索
      * @param Integer[] $preorder            
      * @return TreeNode
      */
