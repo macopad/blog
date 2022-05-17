@@ -1,6 +1,10 @@
 <?php 
 
-
+/**
+ * 数字翻转
+ * @param unknown $x
+ * @return number
+ */
 function intreverse($x) {
 
     $ret = 0;
@@ -19,6 +23,6 @@ function intreverse($x) {
 }
 
 
-$x = 1534236469;
+$x = 15346;
 $ret = intreverse($x);
 print_r($ret);

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * 合并链表
+ * 
  * @param array $list1
  * @param array $list2
  */

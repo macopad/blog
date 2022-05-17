@@ -21,7 +21,8 @@ function ip2int($string) {
     //string 2 int
     foreach ($exp as $item) {
         var_dump($item);
-        $result = $item | $result << 8;
+        echo "item bin data:";  var_dump(decbin($item));
+        echo "merge data:"; $result = $item | $result << 8;
         var_dump(decbin($result));
     }
     return $result;
@@ -29,11 +30,13 @@ function ip2int($string) {
 
 function int2ip($int) {
     $first = ($int >> 24) & 0xff;
-    var_dump($first);
-    return $first;
+    $second = ($int >> 16) & 0xff;
+    $third = ($int >> 8) & 0xff;
+    $forth = ($int >> 0) & 0xff;
+    return $first . "." . $second . "." . $third . "." . $forth;
 }
 
-$ip = "101.1.1.222";
+$ip = "101.7.19.222";
 $ret = ip2int($ip);
 var_dump($ret);
 

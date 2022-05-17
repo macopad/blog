@@ -93,15 +93,15 @@ function deleteLastk(&$head, $k) {
 }
 
 
-$array = array(1,2,3,4,5,6,7,8,9,10);
-$head = new Node();
+//$array = array(1,2,3,4,5,6,7,8,9,10);
+//$head = new Node();
 
-foreach ($array as $item) {
+//foreach ($array as $item) {
     //echo "add node:" . $item . "\n";
-    addNode($head, new Node($item, null));
-}
+    //addNode($head, new Node($item, null));
+//}
 
-print_r(getTotal($head));
+//print_r(getTotal($head));
 //delete first n
 //deleteK($head, 4);
 //print_r(getTotal($head));
@@ -109,9 +109,8 @@ print_r(getTotal($head));
 //delete last n
 //deleteLastk($head, 3);
 
-reverse($head);
-
-print_r(getTotal($head));
+//reverse($head);
+//print_r(getTotal($head));
 
 
 
