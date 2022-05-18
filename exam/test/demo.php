@@ -492,7 +492,6 @@ function stack2list(&$stack1, &$stack2, $item, $method) {
         $temp = array_pop($stack2);
         return $temp;
     }
-    
 }
 
 /*
@@ -522,8 +521,32 @@ function stringfanzhuan($str) {
     
 }
 
+//两个数相加
+function twonumsaddforptr($x, $y) {
+    
+}
 
+//容器最多的雨水
+function waterproblem() {
+    
+}
 
+//删除链表第N个节点
+function deleteListN($list , $num) {
+    
+}
+
+//翻转链表的N个节点
+function resListNode(&$list) {
+    
+}
+
+//第N个排列
+function listnsort($list) {
+    
+}
+
+//
 
 
 
