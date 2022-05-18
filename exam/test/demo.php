@@ -457,10 +457,10 @@ function mergeList($list1, $list2) {
         }
     }
     return $newlist;
-    
 }
-$list1 = array(1,2,5,7,9);
-$list2 = array(2,4,6,8,10);
+//$list1 = array(1,2,5,7,9);
+//$list2 = array(2,4,6,8,10);
+//print_r(mergeList($list1, $list2));
 
 //树的遍历和搜索
 function treesearch($tree) {
@@ -468,9 +468,54 @@ function treesearch($tree) {
 }
 
 //2个栈实现一个队列
-function stack2list() {
+function stack2list(&$stack1, &$stack2, $item, $method) {
+    //入队列
+    if($method == "push") {
+        if(!empty($stack2)) {
+            while (!empty($stack2)) {
+                $temp = array_pop($stack2);
+                array_push($stack1, $temp);
+            }
+        }
+        array_push($stack1, $item);
+        return true;
+    }
+    
+    //出队列
+    if($method == "pop") {
+        if(!empty($stack1)) {
+           while (!empty($stack1)) {
+               $temp = array_pop($stack1);
+               array_push($stack2, $temp);
+           }
+        }
+        $temp = array_pop($stack2);
+        return $temp;
+    }
     
 }
+
+/*
+$stack1 = array();
+$stack2 = array();
+$list = array();
+stack2list($stack1, $stack2,"test1", "push");
+print_r($stack1);print_r($stack2);
+stack2list($stack1, $stack2,"test2", "push");
+print_r($stack1);print_r($stack2);
+stack2list($stack1, $stack2,"test3", "push");
+print_r($stack1);print_r($stack2);
+stack2list($stack1, $stack2,"test3", "pop");
+print_r($stack1);print_r($stack2);
+stack2list($stack1, $stack2,"test4", "push");
+print_r($stack1);print_r($stack2);
+stack2list($stack1, $stack2,"test5", "push");
+print_r($stack1);print_r($stack2);
+stack2list($stack1, $stack2,"test3", "pop");
+print_r($stack1);print_r($stack2);
+stack2list($stack1, $stack2,"test3", "pop");
+print_r($stack1);print_r($stack2);
+*/
 
 //第三个字符串翻转
 function stringfanzhuan($str) {
