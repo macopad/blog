@@ -526,7 +526,7 @@ function twonumsaddforptr($x, $y) {
     
 }
 
-//容器最多的雨水
+//容器最多的雨水/接雨水问题
 function waterproblem() {
     
 }
@@ -546,8 +546,34 @@ function listnsort($list) {
     
 }
 
-//
-
+//丢失的自然数,比如5,9,-1,3,1.返回2，对于7,4,2,9,5.返回1，对于-1,3,1,2,4,-2 .返回5
+function ziranshu($list) {
+    $min = 999;
+    $len = count($list);
+    for($i = 0; $i < $len; $i++) {
+        if($list[$i] <= 1) {
+            continue;
+        }
+        
+        $temp = $list[$i] - 1;
+        if(!in_array($temp, $list)) {
+            if($temp < $min) {
+                $min = $temp;
+            }
+        }
+        
+        $temp = $list[$i] + 1;
+        if(!in_array($temp, $list)) {
+            if($temp < $min) {
+                $min = $temp;
+            }
+            
+        }
+    }
+    return $min;
+}
+//$list = array(7,4,2,9,5);
+//print_r(ziranshu($list));
 
 
 
